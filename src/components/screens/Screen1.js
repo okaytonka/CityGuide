@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Dimensions } from 'react-native';
 import MenuButton from '../menu/MenuButton';
+import FilterComponent from '../minicomponents/FilterComponent'
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -19,8 +20,8 @@ export default class Screen1 extends React.Component {
             <SafeAreaView style={styles.safeArea} >
                 <MenuButton navigation={this.props.navigation} />
                 <View style={styles.container}>
-                    <Text> Screen1</Text>
                 </View>
+                <FilterComponent />
             </SafeAreaView>
 
         )
@@ -30,11 +31,12 @@ export default class Screen1 extends React.Component {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: '#FF5236'
+        backgroundColor: '#81D4FA'
     },
     container: {
         flex: 1,
-        backgroundColor: '#f3ece7',
+
+        backgroundColor: '#81D4FA',
         alignItems: 'center',
         justifyContent: 'center'
     }
