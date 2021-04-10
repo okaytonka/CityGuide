@@ -49,7 +49,7 @@ export default class MenuDrawer extends React.Component {
                     </View>
                     <View style={styles.buttonLinks}>
                         {this.navLink('Home', 'Anasayfa')}
-                        {this.navLink('Screen1', 'Screen1')}
+                        {this.navLink('Screen1', 'Listeler')}
 
                     </View>
                 </ScrollView>
