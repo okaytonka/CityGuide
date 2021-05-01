@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Dimensions } from 'react-native';
 import MenuButton from '../menu/MenuButton';
+import MapView from 'react-native-maps';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -19,7 +20,7 @@ export default class HomeScreen extends React.Component {
             <SafeAreaView style={styles.safeArea} >
                 <MenuButton navigation={this.props.navigation} />
                 <View style={styles.container}>
-                    <Text>Home Screen</Text>
+                    <MapView style={styles.map} />
                 </View>
             </SafeAreaView>
 
@@ -37,5 +38,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#f3ece7',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    map: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
     }
 });
